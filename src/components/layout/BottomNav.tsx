@@ -8,12 +8,12 @@ export default function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+    <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-dark-100 border-t dark:border-dark-50">
       <div className="flex justify-around items-center h-16 max-w-md mx-auto">
         <Link 
           href="/"
           className={`flex flex-col items-center justify-center w-full h-full ${
-            pathname === '/' ? 'text-blue-500' : 'text-gray-500'
+            pathname === '/' ? 'text-blue-500 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400'
           }`}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -25,7 +25,7 @@ export default function BottomNav() {
         <Link 
           href="/scan"
           className={`flex flex-col items-center justify-center w-full h-full ${
-            pathname === '/scan' ? 'text-blue-500' : 'text-gray-500'
+            pathname === '/scan' ? 'text-blue-500 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400'
           }`}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ export default function BottomNav() {
         <Link 
           href="/history"
           className={`flex flex-col items-center justify-center w-full h-full ${
-            pathname === '/history' ? 'text-blue-500' : 'text-gray-500'
+            pathname === '/history' ? 'text-blue-500 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400'
           }`}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

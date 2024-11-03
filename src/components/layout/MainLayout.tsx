@@ -7,8 +7,8 @@ interface MainLayoutProps {
 
 export default function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <main className="pb-16 max-w-md mx-auto">
+    <div className="min-h-screen bg-gray-50 dark:bg-[#191919]">
+      <main className="pb-16 max-w-md mx-auto bg-gray-50 dark:bg-[#191919]">
         {children}
       </main>
       <BottomNav />

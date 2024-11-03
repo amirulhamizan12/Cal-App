@@ -44,7 +44,7 @@ export default function ScanPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black dark:bg-dark-DEFAULT">
       {/* Camera Container */}
       <div className="relative h-screen">
         <CameraView
@@ -56,7 +56,7 @@ export default function ScanPage() {
         {/* UI Overlay */}
         <div className="absolute inset-0 flex flex-col">
           {/* Top Bar */}
-          <div className="p-4 flex justify-between items-center">
+          <div className="p-4 flex justify-between items-center bg-black/20 dark:bg-dark-50/20">
             <button 
               onClick={() => router.back()}
               className="text-white p-2 rounded-full hover:bg-white/10"
@@ -97,7 +97,7 @@ export default function ScanPage() {
           </div>
 
           {/* Bottom Controls */}
-          <div className="p-8 pb-24 bg-gradient-to-t from-black/80 to-transparent">
+          <div className="p-8 pb-24 bg-gradient-to-t from-dark-DEFAULT/80 to-transparent">
             {!isCameraReady ? (
               <div className="text-white text-center animate-pulse">
                 Initializing camera...
@@ -106,10 +106,10 @@ export default function ScanPage() {
               <button 
                 onClick={() => handleCapture(null)}
                 disabled={isScanning}
-                className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center disabled:opacity-50"
+                className="w-16 h-16 mx-auto bg-white dark:bg-dark-50 rounded-full flex items-center justify-center disabled:opacity-50"
               >
                 <div className={`w-12 h-12 rounded-full transition-colors ${
-                  isScanning ? 'bg-red-500 animate-pulse' : 'bg-black'
+                  isScanning ? 'bg-red-500 animate-pulse' : 'bg-black dark:bg-dark-DEFAULT'
                 }`} />
               </button>
             )}
